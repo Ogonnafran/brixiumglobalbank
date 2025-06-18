@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brixium Global Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Custom Tailwind config to be applied via CDN, matching tailwind.config.js
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brixium-purple-light': '#A495D9',
+              'brixium-purple': '#7C5DFA',
+              'brixium-purple-dark': '#5D3EBE',
+              'brixium-gray-light': '#F3F4F6',
+              'brixium-gray': '#6B7280',
+              'brixium-gray-dark': '#374151',
+              'brixium-bg': '#111827',
+              'brixium-bg-light': '#1F2937'
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'slide-in-up': 'slideInUp 0.5s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideInUp: {
+                '0%': { transform: 'translateY(20px)', opacity: '0'},
+                '100%': { transform: 'translateY(0px)', opacity: '1'},
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "@/": "./",
+    "lucide-react": "https://esm.sh/lucide-react@^0.363.0",
+    "react": "https://esm.sh/react@^18.2.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^6.22.3",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "vite": "https://esm.sh/vite@^6.3.5",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^4.5.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brixium-bg text-brixium-gray-light">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
